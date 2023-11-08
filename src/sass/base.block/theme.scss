@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Be Vietnam Pro";
+    src: url('../../fonts/BeVietnamPro-Regular.ttf') format('truetype');
+}
+
+@mixin theme {
+    background-color: var(--bgr-default);
+    color: var(--text-primary);
+}
+
+@mixin theme_color_light {
+    --bgr-default: #fff;
+    --bgr-accent: hsl(12, 88%, 59%);
+    --bgr-hover: #fff;
+
+    --text-primary: hsl(227, 12%, 61%);
+    --text-secondary: hsl(233, 12%, 13%);
+    --text-link: hsl(233, 12%, 13%);
+    --text-hover: hsl(227, 12%, 61%);
+}
+
+@mixin theme_color_dark {
+    --bgr-default: hsl(233, 12%, 13%);
+    --bgr-accent: hsl(12, 88%, 59%);
+    --bgr-hover: hsl(233, 12%, 13%);
+
+    --text-primary: #fff;
+    --text-secondary: hsl(227, 12%, 61%);
+    --text-link: #fff;
+    --text-hover: hsl(12, 88%, 59%);
+}
+
+@mixin theme_color_accent {
+    --bgr-default: hsl(12, 88%, 59%);
+    --bgr-accent: #fff;
+    --bgr-hover: hsl(13, 100%, 96%);
+
+    --text-primary: hsl(12, 88%, 59%);
+    --text-secondary: #fff;
+    --text-link: hsl(12, 88%, 59%);
+    --text-hover: hsl(13, 100%, 96%);
+}
+
+@mixin theme_font_xl {
+    font-family: "Be Vietnam Pro";
+    font-weight: 700;
+    font-size: 44pt;
+}
+
+@mixin theme_font_l {
+    font-family: "Be Vietnam Pro";
+    font-weight: 500;
+    font-size: 32pt;
+}
+
+@mixin theme_font_m {
+    font-family: "Be Vietnam Pro";
+    font-weight: 500;
+    font-size: 16pt;
+}
+
+@mixin theme_font_s {
+    font-family: "Be Vietnam Pro";
+    font-weight: 400;
+    font-size: 16pt;
+}
+
+@mixin theme_font_xs {
+    font-family: "Be Vietnam Pro";
+    font-weight: 400;
+    font-size: 14pt;
+}
+
+@mixin theme_font_xxs {
+    font-family: "Be Vietnam Pro";
+    font-weight: 400;
+    font-size: 12pt;
+}
