@@ -48,7 +48,7 @@ $desktop: 1440px;
     --bgr-accent: #fff;
     --bgr-hover: hsl(13, 100%, 96%);
 
-    --text-primary: hsl(12, 88%, 59%);
+    --text-primary: #fff
     --text-secondary: #fff;
     --text-link: #fff;
     --text-hover: hsl(13, 100%, 96%);
@@ -61,7 +61,7 @@ $desktop: 1440px;
 
 @mixin theme_font_l {
     font-family: "Be Vietnam Pro Bold", sans-serif;
-    font-size: 16pt;
+    font-size: 20pt;
 }
 
 @mixin theme_font_m {
