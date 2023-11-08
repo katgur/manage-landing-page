@@ -3,6 +3,19 @@
     src: url('../../fonts/BeVietnamPro-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: "Be Vietnam Pro Bold";
+    src: url('../../fonts/BeVietnamPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro SemiBold";
+    src: url('../../fonts/BeVietnamPro-SemiBold.ttf') format('truetype');
+}
+
+$mobile: 375px;
+$desktop: 1440px;
+
 @mixin theme {
     background-color: var(--bgr-default);
     color: var(--text-primary);
@@ -37,42 +50,36 @@
 
     --text-primary: hsl(12, 88%, 59%);
     --text-secondary: #fff;
-    --text-link: hsl(12, 88%, 59%);
+    --text-link: #fff;
     --text-hover: hsl(13, 100%, 96%);
 }
 
 @mixin theme_font_xl {
-    font-family: "Be Vietnam Pro";
-    font-weight: 700;
+    font-family: "Be Vietnam Pro Bold", sans-serif;
     font-size: 44pt;
 }
 
 @mixin theme_font_l {
-    font-family: "Be Vietnam Pro";
-    font-weight: 500;
+    font-family: "Be Vietnam Pro Bold", sans-serif;
     font-size: 32pt;
 }
 
 @mixin theme_font_m {
-    font-family: "Be Vietnam Pro";
-    font-weight: 500;
-    font-size: 16pt;
+    font-family: "Be Vietnam Pro SemiBold", sans-serif;
+    font-size: 16px;
 }
 
 @mixin theme_font_s {
-    font-family: "Be Vietnam Pro";
-    font-weight: 400;
-    font-size: 16pt;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 16px;
 }
 
 @mixin theme_font_xs {
-    font-family: "Be Vietnam Pro";
-    font-weight: 400;
-    font-size: 14pt;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 14px;
 }
 
 @mixin theme_font_xxs {
-    font-family: "Be Vietnam Pro";
-    font-weight: 400;
-    font-size: 12pt;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 12px;
 }

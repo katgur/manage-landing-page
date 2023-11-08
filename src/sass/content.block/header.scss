@@ -1,0 +1,72 @@
+@import '../base.block/theme.scss';
+@import '../base.block/button.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header__wrapper {
+    background: linear-gradient(transparent, rgba(28, 29, 38, 0.33));
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header__nav {
+    @include theme;
+    @include theme_color_light;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+    margin: 104px 24px;
+    padding: 20px;
+}
+
+.header__link {
+    @include theme_font_m;
+    padding: 18px;
+}
+
+.header__close {
+    z-index: 100;
+}
+
+.header__none {
+    display: none;
+}
+
+@media (min-width: $desktop) {
+
+    .header__burger, .header__close {
+        display: none;
+    }
+
+    .header__wrapper {
+        display: block;
+        background: transparent;
+        width: fit-content;
+        height: fit-content;
+        position: unset;
+    }
+
+    .header__nav {
+        background: transparent;
+        flex-direction: row;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__button {
+        @include button;
+        display: block;
+
+    }
+}

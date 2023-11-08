@@ -25,13 +25,13 @@
 
   <header class="header">
     <img class="header__logo" src="./images/logo.svg" alt="Manage Logo">
-    <svg class="header__burger" xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+    <svg class="header__burger" xmlns="http://www.w3.org/2000/svg" role="img">
       <use xlink:href="./images/sprite.svg#icon-hamburger"></use>
     </svg>
-    <svg class="header__close" xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+    <svg class="header__close header__none" xmlns="http://www.w3.org/2000/svg" role="img">
       <use xlink:href="./images/sprite.svg#icon-close"></use>
     </svg>
-    <div class="header__wrapper">
+    <div class="header__wrapper header__none">
       <nav class="header__nav">
         <a class="header__link" href="#">Pricing</a>
         <a class="header__link" href="#">Product</a>
@@ -40,12 +40,12 @@
         <a class="header__link" href="#">Community</a>
       </nav>
     </div>
-    <a href="#" class="header__button">Get Started</a>
+    <a href="#" class="header__button header__none">Get Started</a>
   </header>
 
   <main>
     <article class="hero">
-      <img src="./images/illustration-intro.svg" alt="Dashboard graphs">
+      <img class="hero__image" src="./images/illustration-intro.svg" alt="Dashboard graphs">
       <h1 class="hero__title">Bring everyone together to build better products.</h1>
       <p class="hero__text">
         Manage makes it simple for software teams to plan day-to-day
@@ -219,6 +219,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </footer>
+
+  <script src="./js/menu.min.js"></script>
 </body>
 
 </html>
