@@ -56,12 +56,12 @@ $desktop: 1440px;
 
 @mixin theme_font_xl {
     font-family: "Be Vietnam Pro Bold", sans-serif;
-    font-size: 44pt;
+    font-size: 24pt;
 }
 
 @mixin theme_font_l {
     font-family: "Be Vietnam Pro Bold", sans-serif;
-    font-size: 32pt;
+    font-size: 16pt;
 }
 
 @mixin theme_font_m {
@@ -82,4 +82,30 @@ $desktop: 1440px;
 @mixin theme_font_xxs {
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 12px;
+}
+
+h1, h2, h3 {
+    color: var(--text-secondary);
+}
+
+h1 {
+    @include theme_font_xl;
+}
+
+h2 {
+    @include theme_font_l;
+}
+
+h3 {
+    @include theme_font_m;
+}
+
+p {
+    @include theme_font_s;
+}
+
+@media (min-width: $desktop) {
+    h1 {
+        font-size: 36pt;
+    }
 }

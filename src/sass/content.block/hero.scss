@@ -1,3 +1,44 @@
+@import '../base.block/button.scss';
+
+.hero__title, .hero__text {
+    text-align: center;
+}
+
+.hero__text {
+    line-height: 1.8em;
+}
+
+.hero__button {
+    @include button;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .hero__image {
     width: 100%;
+}
+
+@media (min-width: $desktop) {
+    .hero {
+        display: flex;
+        gap: 100px;
+    }
+
+    .hero__title, .hero__text {
+        text-align: left;
+    }
+
+    .hero__image {
+        width: 50%;
+        order: 1;
+    }
+
+    .hero__content {
+        width: 50%;
+    }
+
+    .hero__button {
+        margin: 0;
+    }
 }
