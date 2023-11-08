@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "build:html": "gulp html",
+    "build:js": "gulp scripts"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^9.0.0",
     "gulp-webp": "^5.0.0"
   }
 }

@@ -12,13 +12,14 @@ import rename from "gulp-rename";
 import convertwebp from "gulp-webp";
 import jsmin from 'gulp-jsmin';
 import htmlmin from 'gulp-htmlmin';
+import svgstore from "gulp-svgstore";
 
 function clean() {
     return src('dist/', { read: false })
         .pipe(gulpclean());
 }
 
-function html() {
+export function html() {
     return src("src/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest("dist/"));
@@ -53,7 +54,14 @@ function webp() {
         .pipe(dest("dist/images/"));
 }
 
-function scripts() {
+const sprite = () => {
+    return src("src/images/sprite/*.svg")
+        .pipe(svgstore())
+        .pipe(rename("sprite.svg"))
+        .pipe(gulp.dest("dist/images"))
+}
+
+export function scripts() {
     return src("src/js/*.js")
         .pipe(jsmin())
         .pipe(rename({ suffix: '.min' }))
@@ -69,5 +77,5 @@ function serve() {
     watch("src/**/*.{scss,sass}").on("change", series(style, server.reload));
 }
 
-export const build = series(clean, html, fonts, images, webp, style, scripts);
-export default series(clean, html, fonts, images, webp, style, scripts, serve);
+export const build = series(clean, html, fonts, images, webp, sprite, style, scripts);
+export default series(clean, html, fonts, images, webp, sprite, style, scripts, serve);
