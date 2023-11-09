@@ -7,6 +7,12 @@
     @include theme_color_dark;
     display: flex;
     flex-direction: column;
+    padding-top: 52px;
+}
+
+.footer>* {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .footer__socials {
@@ -18,14 +24,27 @@
     flex-direction: column;
     flex-wrap: wrap;
     order: -2;
+    padding-top: 48px;
+    height: 200px;
+}
+
+.footer__link {
+    @include theme_font_s;
+    padding: 4px 72px 4px 32px;
 }
 
 .footer__form {
+    display: flex;
+    gap: 10px;
     order: -3;
 }
 
 .footer__socials {
     order: -1;
+}
+
+.footer__item svg {
+    width: 48px;
 }
 
 .footer__input {
@@ -35,6 +54,9 @@
 .footer__button {
     @include button;
     @include button_color_accent;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 @media (min-width: $desktop) {

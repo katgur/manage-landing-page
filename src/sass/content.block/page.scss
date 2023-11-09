@@ -4,8 +4,8 @@
     @include theme;
     @include theme_color_light;
     background: url('../../images/bg-tablet-pattern.svg') no-repeat;
-    background-size: 100%;
-    background-position: left 250% top -1%;
+    background-size: 120%;
+    background-position: right -150px top -125px;
 }
 
 .page>* {

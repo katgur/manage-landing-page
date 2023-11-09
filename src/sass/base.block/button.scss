@@ -2,14 +2,14 @@
 
 @mixin button {
     @include theme;
-    padding: 16px 32px;
+    @include theme_font_xxs;
+    padding: 14px 34px;
     border-radius: 24px;
     display: block;
 }
 
 @mixin button_color_accent {
     @include theme_color_accent;
-    @include theme_font_xs;
 }
 
 @mixin button_color_light {

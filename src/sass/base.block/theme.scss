@@ -27,7 +27,7 @@ $desktop: 1440px;
     --bgr-hover: #fff;
 
     --text-primary: hsl(227, 12%, 61%);
-    --text-secondary: hsl(233, 12%, 13%);
+    --text-secondary: hsl(228, 39%, 23%);
     --text-link: hsl(233, 12%, 13%);
     --text-hover: hsl(227, 12%, 61%);
 }
@@ -48,7 +48,7 @@ $desktop: 1440px;
     --bgr-accent: #fff;
     --bgr-hover: hsl(13, 100%, 96%);
 
-    --text-primary: #fff
+    --text-primary: #fff;
     --text-secondary: #fff;
     --text-link: #fff;
     --text-hover: hsl(13, 100%, 96%);
@@ -56,22 +56,27 @@ $desktop: 1440px;
 
 @mixin theme_font_xl {
     font-family: "Be Vietnam Pro Bold", sans-serif;
-    font-size: 24pt;
+    font-size: 28pt;
+    letter-spacing: -0.01em;
+    line-height: 1.32em;
 }
 
 @mixin theme_font_l {
     font-family: "Be Vietnam Pro Bold", sans-serif;
-    font-size: 20pt;
+    font-size: 24pt;
+    letter-spacing: -0.03em;
 }
 
 @mixin theme_font_m {
     font-family: "Be Vietnam Pro SemiBold", sans-serif;
     font-size: 16px;
+    letter-spacing: -0.03em;
 }
 
 @mixin theme_font_s {
     font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 2em;
 }
 
 @mixin theme_font_xs {
@@ -80,7 +85,7 @@ $desktop: 1440px;
 }
 
 @mixin theme_font_xxs {
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: "Be Vietnam Pro SemiBold", sans-serif;
     font-size: 12px;
 }
 

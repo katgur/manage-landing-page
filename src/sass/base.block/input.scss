@@ -1,7 +1,7 @@
 @mixin input {
     @include theme;
     @include theme_color_light;
-    padding: 16px 32px;
+    padding: 14px 54px 14px 24px;
     border-radius: 24px;
     display: block;
 }
