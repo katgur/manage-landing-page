@@ -1,0 +1,29 @@
+@import '../base.block/theme.scss';
+@import '../base.block/button.scss';
+
+.last {
+    @include theme;
+    @include theme_color_accent;
+}
+
+.last__title {
+    text-align: center;
+}
+
+.last__button {
+    @include button;
+    @include button_color_light;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+@media (min-width: $desktop) {
+    .last {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .last__button {
+        margin: 0;
+    }
+}
