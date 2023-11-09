@@ -1,0 +1,66 @@
+@import '../base.block/theme.scss';
+@import '../base.block/button.scss';
+@import '../base.block/input.scss';
+
+.footer {
+    @include theme;
+    @include theme_color_dark;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: -2;
+}
+
+.footer__form {
+    order: -3;
+}
+
+.footer__socials {
+    order: -1;
+}
+
+.footer__input {
+    @include input;
+}
+
+.footer__button {
+    @include button;
+    @include button_color_accent;
+}
+
+@media (min-width: $desktop) {
+    .footer {
+        @include theme;
+        @include theme_color_dark;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__socials {
+        display: flex;
+    }
+
+    .footer__nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .footer__input {
+        @include input;
+    }
+
+    .footer__button {
+        @include button;
+        @include button_color_accent;
+    }
+}
