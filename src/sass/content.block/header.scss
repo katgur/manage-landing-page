@@ -55,7 +55,7 @@
 
 @media (min-width: $desktop) {
     .header {
-        padding: 54px;
+        padding: 50px;
     }
 
     .header__burger,
@@ -83,7 +83,8 @@
         @include theme_font_s;
         font-weight: 700;
         margin-bottom: 4px;
-        padding: 16px;
+        padding: 20px;
+        font-size: 12px;
     }
 
     .header__link:link, .header__link:visited {
