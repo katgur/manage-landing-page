@@ -25,7 +25,8 @@
     margin-top: 26px;
 }
 
-.last__button:link, .last__button:visited {
+.last__button:link,
+.last__button:visited {
     color: var(--bgr-accent);
 }
 
@@ -33,6 +34,18 @@
     .last {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        background: url('../../images/bg-simplify-section-desktop.svg') no-repeat var(--bgr-default);
+        background-position: 250px -140px;
+        margin-top: 150px;
+        margin-left: -165px;
+        margin-right: -165px;
+        padding: 60px 165px;
+    }
+
+    .last__title {
+        text-align: left;
+        width: 40%;
     }
 
     .last__button {
