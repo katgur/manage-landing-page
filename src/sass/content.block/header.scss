@@ -34,8 +34,15 @@
     padding: 18px;
 }
 
+.header__burger {
+    width: 24px;
+    height: 24px;
+}
+
 .header__close {
     z-index: 100;
+    width: 24px;
+    height: 24px;
 }
 
 .header__logo {
@@ -48,7 +55,8 @@
 
 @media (min-width: $desktop) {
 
-    .header__burger, .header__close {
+    .header__burger,
+    .header__close {
         display: none;
     }
 
