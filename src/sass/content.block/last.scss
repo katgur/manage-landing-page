@@ -4,10 +4,17 @@
 .last {
     @include theme;
     @include theme_color_accent;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 96px 30px;
+    background: url('../../images/bg-simplify-section-mobile.svg') no-repeat var(--bgr-default);
+    background-position: 0 50%;
+
 }
 
 .last__title {
     text-align: center;
+    @include theme_font_xl;
 }
 
 .last__button {
@@ -15,6 +22,11 @@
     @include button_color_light;
     width: fit-content;
     margin: 0 auto;
+    margin-top: 26px;
+}
+
+.last__button:link, .last__button:visited {
+    color: var(--bgr-accent);
 }
 
 @media (min-width: $desktop) {

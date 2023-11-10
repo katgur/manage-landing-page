@@ -3,9 +3,10 @@
 .page {
     @include theme;
     @include theme_color_light;
-    background: url('../../images/bg-tablet-pattern.svg') no-repeat;
-    background-size: 100%;
-    background-position: left 250% top -1%;
+    background: url('../../images/bg-tablet-pattern.svg') no-repeat,
+    url('../../images/bg-tablet-pattern.svg') no-repeat;
+    background-size: 120%,85%;
+    background-position: right -150px top -125px,right -200px top 500px;
 }
 
 .page>* {

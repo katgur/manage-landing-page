@@ -1,18 +1,23 @@
 @import '../base.block/button.scss';
 
+.hero {
+    margin-top: 20px;
+}
 .hero__title, .hero__text {
     text-align: center;
 }
 
 .hero__text {
-    line-height: 1.8em;
+    line-height: 1.7em;
+    margin-top: 10px;
 }
 
 .hero__button {
     @include button;
-    display: block;
+    @include button_color_accent;
     width: fit-content;
     margin: 0 auto;
+    margin-top: 28px;
 }
 
 .hero__image {

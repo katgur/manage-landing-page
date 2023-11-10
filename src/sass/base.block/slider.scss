@@ -1,0 +1,31 @@
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+}
+
+.slider__item {
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.slider__indicator {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    --swiper-pagination-bottom: 124px;
+}
+
+.slider__pointer {
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-color: var(--bgr-accent);
+    --swiper-pagination-bullet-horizontal-gap: 0;
+    border: var(--bgr-accent) 1.5px solid;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: white;
+
+}

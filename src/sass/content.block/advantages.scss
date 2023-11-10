@@ -1,15 +1,36 @@
 @import '../base.block/theme.scss';
 
+.advantages {
+    margin-top: 100px;
+}
+
 .advantages__title--l, .advantages__text--l {
     text-align: center;
 }
 
+.advantages__text--l {
+    margin-top: 18px;
+    padding: 10px;
+}
+
+.advantages__item {
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-top: 42px;
+    padding-bottom: 4px;
+}
+
 .advantages__title--m {
     position: relative;
-    padding: 8px;
-    padding-left: 64px;
+    padding: 10px;
+    padding-left: 80px;
     background-color: hsl(13, 100%, 96%);
-    border-radius: 12px 0 0 12px;
+    border-radius: 28px 0 0 28px;
+    margin-right: -24px;
+}
+
+.advantages__text--m {
+    margin-top: 10px;
 }
 
 .advantages__number {
@@ -20,9 +41,10 @@
     position: absolute;
     left: 0;
     top: 0;
-    padding: 8px 20px;
-    border-radius: 16px;
+    padding: 20px 26px;
+    border-radius: 28px;
     height: 100%;
+    color: white;
 }
 
 @media (min-width: $desktop) {

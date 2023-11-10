@@ -1,0 +1,46 @@
+@import '../base.block/button.scss';
+
+.testimonials {
+    margin-top: 58px;
+    position: relative;
+    padding-bottom: 32px !important;
+}
+
+.testimonials__title {
+    text-align: center;
+}
+
+.testimonials__list {
+    margin-top: 72px;
+}
+
+.testimonials__item {
+    padding: 24px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.testimonials__avatar {
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    margin: 0 auto;
+    margin-top: -58px;
+}
+
+.testimonials__title--m {
+    margin-top: 32px;
+}
+
+.testimonials__text {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.testimonials__button {
+    @include button;
+    @include button_color_accent;
+    @include button--shadow;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 72px;
+}
