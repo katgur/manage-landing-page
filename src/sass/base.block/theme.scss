@@ -111,6 +111,8 @@ p {
 
 @media (min-width: $desktop) {
     h1 {
-        font-size: 36pt;
+        font-size: 40pt;
+        line-height: 1.2em;
+        letter-spacing: -.02em;
     }
 }
