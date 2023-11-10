@@ -1,0 +1,31 @@
+@import '../base.block/theme.scss';
+
+.page {
+    @include theme;
+    @include theme_color_light;
+    background: url('../../images/bg-tablet-pattern.svg') no-repeat,
+    url('../../images/bg-tablet-pattern.svg') no-repeat;
+    background-size: 120%,85%;
+    background-position: right -150px top -125px,right -200px top 500px;
+}
+
+.page>* {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (min-width: $desktop) {
+    .page {
+        @include theme;
+        @include theme_color_light;
+        background: url('../../images/bg-tablet-pattern.svg') no-repeat,
+        url('../../images/bg-tablet-pattern.svg') no-repeat;
+        background-size: 57%,56%;
+        background-position: right -150px top -150px,left -500px top 1125px;
+    }
+
+    .page>* {
+        padding-left: 165px;
+        padding-right: 165px;
+    }
+}

@@ -1,0 +1,54 @@
+@import '../base.block/theme.scss';
+@import '../base.block/button.scss';
+
+.last {
+    @include theme;
+    @include theme_color_accent;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 96px 30px;
+    background: url('../../images/bg-simplify-section-mobile.svg') no-repeat var(--bgr-default);
+    background-position: 0 50%;
+
+}
+
+.last__title {
+    text-align: center;
+    @include theme_font_xl;
+}
+
+.last__button {
+    @include button;
+    @include button_color_light;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+
+.last__button:link,
+.last__button:visited {
+    color: var(--bgr-accent);
+}
+
+@media (min-width: $desktop) {
+    .last {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url('../../images/bg-simplify-section-desktop.svg') no-repeat var(--bgr-default);
+        background-position: 250px -140px;
+        margin-top: 150px;
+        margin-left: -165px;
+        margin-right: -165px;
+        padding: 60px 165px;
+    }
+
+    .last__title {
+        text-align: left;
+        width: 40%;
+    }
+
+    .last__button {
+        margin: 0;
+    }
+}

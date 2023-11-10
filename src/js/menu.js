@@ -1,0 +1,13 @@
+var close = document.getElementsByClassName('header__close')[0];
+var burger = document.getElementsByClassName('header__burger')[0];
+var nav = document.getElementsByClassName('header__wrapper')[0];
+close.onclick = function () {
+    nav.classList.add('header__none');
+    close.classList.add('header__none');
+    burger.classList.remove('header__none');
+}
+burger.onclick = function () {
+    nav.classList.remove('header__none');
+    close.classList.remove('header__none');
+    burger.classList.add('header__none');
+}

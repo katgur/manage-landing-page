@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <title>Frontend Mentor | Manage landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       font-size: 11px;
@@ -27,13 +27,13 @@
 
   <header class="header">
     <img class="header__logo" src="./images/logo.svg" alt="Manage Logo">
-    <svg class="header__burger" xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+    <svg class="header__burger" xmlns="http://www.w3.org/2000/svg" role="img">
       <use xlink:href="./images/sprite.svg#icon-hamburger"></use>
     </svg>
-    <svg class="header__close" xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+    <svg class="header__close header__none" xmlns="http://www.w3.org/2000/svg" role="img">
       <use xlink:href="./images/sprite.svg#icon-close"></use>
     </svg>
-    <div class="header__wrapper">
+    <div class="header__wrapper header__none">
       <nav class="header__nav">
         <a class="header__link" href="#">Pricing</a>
         <a class="header__link" href="#">Product</a>
@@ -42,72 +42,76 @@
         <a class="header__link" href="#">Community</a>
       </nav>
     </div>
-    <a href="#" class="header__button">Get Started</a>
+    <a href="#" class="header__button header__none">Get Started</a>
   </header>
 
   <main>
     <article class="hero">
-      <img src="./images/illustration-intro.svg" alt="Dashboard graphs">
-      <h1 class="hero__title">Bring everyone together to build better products.</h1>
-      <p class="hero__text">
-        Manage makes it simple for software teams to plan day-to-day
-        tasks while keeping the larger team goals in view.
-      </p>
-      <a href="#" class="hero__button">Get Started</a>
+      <img class="hero__image" src="./images/illustration-intro.svg" alt="Dashboard graphs">
+      <div class="hero__content">
+        <h1 class="hero__title">Bring everyone together to build better products.</h1>
+        <p class="hero__text">
+          Manage makes it simple for software teams to plan day-to-day
+          tasks while keeping the larger team goals in view.
+        </p>
+        <a href="#" class="hero__button">Get Started</a>
+      </div>
     </article>
 
-    <article class="different">
-      <h2 class="different__title">What’s different about Manage?</h2>
-      <p class="different__text">
-        Manage provides all the functionality your team needs, without
-        the complexity. Our software is tailor-made for modern digital
-        product teams.
-      </p>
-    </article>
+    <section class="advantages">
+      <article class="advantages__different">
+        <h2 class="advantages__title--l">What’s different about Manage?</h2>
+        <p class="advantages__text--l">
+          Manage provides all the functionality your team needs, without
+          the complexity. Our software is tailor-made for modern digital
+          product teams.
+        </p>
+      </article>
+      <ol class="advantages__list">
+        <li class="advantages__item">
+          <article class="advantages__article">
+            <h3 class="advantages__title--m"><span class="advantages__number">01</span>Track company-wide progress</h3>
+            <p class="advantages__text--m">
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way done to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
+          </article>
+        </li>
+        <li class="advantages__item">
+          <article class="advantages__article">
 
-    <ol class="advantages">
-      <li class="advantages__item">
-        <article class="advantages__article">
-          <span class="advantages__number">01</span>
-          <h3 class="advantages__title">Track company-wide progress</h3>
-          <p class="advantages__text">
-            See how your day-to-day tasks fit into the wider vision. Go from
-            tracking progress at the milestone level all the way done to the
-            smallest of details. Never lose sight of the bigger picture again.
-          </p>
-        </article>
-      </li>
-      <li class="advantages__item">
-        <article class="advantages__article">
-          <span class="advantages__number">02</span>
-          <h3 class="advantages__title">Advanced built-in reports</h3>
-          <p class="advantages__text">
-            Set internal delivery estimates and track progress toward company
-            goals. Our customisable dashboard helps you build out the reports
-            you need to keep key stakeholders informed.
-          </p>
-        </article>
-      </li>
-      <li class="advantages__item">
-        <article class="advantages__article">
-          <span class="advantages__number">03</span>
-          <h3 class="advantages__title">Everything you need in one place</h3>
-          <p class="advantages__text">
-            Stop jumping from one service to another to communicate, store files,
-            track tasks and share documents. Manage offers an all-in-one team
-            productivity solution.
-          </p>
-        </article>
-      </li>
-    </ol>
+            <h3 class="advantages__title--m"><span class="advantages__number">02</span>Advanced built-in reports</h3>
+            <p class="advantages__text--m">
+              Set internal delivery estimates and track progress toward company
+              goals. Our customisable dashboard helps you build out the reports
+              you need to keep key stakeholders informed.
+            </p>
+          </article>
+        </li>
+        <li class="advantages__item">
+          <article class="advantages__article">
 
-    <section class="testimonials">
+            <h3 class="advantages__title--m"><span class="advantages__number">03</span>Everything you need in one place
+            </h3>
+            <p class="advantages__text--m">
+              Stop jumping from one service to another to communicate, store files,
+              track tasks and share documents. Manage offers an all-in-one team
+              productivity solution.
+            </p>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="testimonials swiper">
       <h2 class="testimonials__title testimonials__title--l">
         What they’ve said
       </h2>
-      <ul class="testimonials__list">
-        <li class="testimonials__item">
+      <ul class="testimonials__list swiper-wrapper">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-anisha.png" alt="Avatar of Anisha Li">
             <h3 class="testimonials__title testimonials__title--m">
               Anisha Li
             </h3>
@@ -117,8 +121,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-ali.png" alt="Avatar of Ali Bravo">
             <h3 class="testimonials__title testimonials__title--m">
               Ali Bravo
             </h3>
@@ -129,8 +134,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-richard.png" alt="Avatar of Richard Watts">
             <h3 class="testimonials__title testimonials__title--m">
               Richard Watts
             </h3>
@@ -140,8 +146,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-shanai.png" alt="Avatar of Shanai Gough">
             <h3 class="testimonials__title testimonials__title--m">
               Shanai Gough
             </h3>
@@ -152,6 +159,7 @@
           </article>
         </li>
       </ul>
+      <div class="swiper-pagination slider__indicator"></div>
       <a class="testimonials__button" href="#">Get Started</a>
     </section>
 
@@ -161,66 +169,69 @@
     </section>
   </main>
 
-  <footer>
-    <img class="footer__logo" src="./images/logo.svg" alt="Manage Logo">
-    <ul class="footer__socials">
-      <li class="footer__item">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <img class="footer__logo" src="./images/logo-white.svg" alt="Manage Logo">
+      <div class="footer__socials">
+        <a class="footer__item" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img">
             <use xlink:href="./images/sprite.svg#icon-facebook"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__item">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+        <a class="footer__item" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img">
             <use xlink:href="./images/sprite.svg#icon-youtube"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__item">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+        <a class="footer__item" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img">
             <use xlink:href="./images/sprite.svg#icon-twitter"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__item">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+        <a class="footer__item" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img">
             <use xlink:href="./images/sprite.svg#icon-pinterest"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__item">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img">
+        <a class="footer__item" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" role="img">
             <use xlink:href="./images/sprite.svg#icon-instagram"></use>
           </svg>
         </a>
-      </li>
-    </ul>
-    <nav class="footer__nav">
-      <a class="footer__link" href="#">Home</a>
-      <a class="footer__link" href="#">Pricing</a>
-      <a class="footer__link" href="#">Products</a>
-      <a class="footer__link" href="#">About Us</a>
-      <a class="footer__link" href="#">Careers</a>
-      <a class="footer__link" href="#">Community</a>
-      <a class="footer__link" href="#">Privacy Policy</a>
-    </nav>
-    <form class="footer__form">
-      <input class="footer__input" type="text" placeholder="Updates in your inbox…">
-      <button class="footer__button" type="submit">Go</button>
-    </form>
-    <p class="footer_text">
-      Copyright 2020. All Rights Reserved
-    </p>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      </div>
+      <nav class="footer__nav">
+        <a class="footer__link" href="#">Home</a>
+        <a class="footer__link" href="#">Pricing</a>
+        <a class="footer__link" href="#">Products</a>
+        <a class="footer__link" href="#">About Us</a>
+        <a class="footer__link" href="#">Careers</a>
+        <a class="footer__link" href="#">Community</a>
+        <a class="footer__link" href="#">Privacy Policy</a>
+      </nav>
+      <form class="footer__form">
+        <input class="footer__input" type="text" placeholder="Updates in your inbox…">
+        <button class="footer__button" type="submit">Go</button>
+      </form>
+      <p class="footer__text--s">
+        Copyright 2020. All Rights Reserved
+      </p>
     </div>
   </footer>
+
+  <script src="./js/menu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".testimonials", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' slider__pointer"></span>';
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>

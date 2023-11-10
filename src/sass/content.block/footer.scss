@@ -1,0 +1,142 @@
+@import '../base.block/theme.scss';
+@import '../base.block/button.scss';
+@import '../base.block/input.scss';
+
+.footer {
+    @include theme;
+    @include theme_color_dark;
+}
+
+.footer__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 52px;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: space-around;
+    order: -1;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.footer__item>svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    order: -2;
+    padding-top: 52px;
+    height: 200px;
+    width: 100%;
+}
+
+.footer__link {
+    @include theme_font_s;
+    padding: 4px 0;
+}
+
+.footer__form {
+    display: flex;
+    gap: 10px;
+    order: -3;
+    width: 100%;
+}
+
+.footer__input {
+    @include input;
+    flex: 1;
+}
+
+.footer__button {
+    @include button;
+    @include button_color_accent;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer__logo {
+    width: 150px;
+    margin-top: 48px;
+}
+
+.footer__text--s {
+    color: hsl(227, 12%, 61%);
+    margin-top: 24px;
+}
+
+@media (min-width: $desktop) {
+    .footer {
+        @include theme;
+        @include theme_color_dark;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .footer__wrapper > * {
+        order: unset;
+    }
+
+    .footer__wrapper {
+        padding: 0;
+        display: grid;
+        grid-template-areas: "logo nav form" "socials nav text";
+        grid-template-columns: 240px 1fr 275px;
+    }
+
+    .footer__logo {
+        grid-area: logo;
+        margin-top: 14px;
+        margin-left: 4px;
+    }
+
+    .footer__nav {
+        grid-area: nav;
+        align-content: stretch;
+        padding-top: 28px;
+    }
+
+    .footer__link {
+        padding-left: 50px;
+    }
+
+    .footer__socials {
+        grid-area: socials;
+        justify-content: flex-start;
+        padding: 20px 8px;
+        gap: 9px;
+    }
+
+    .footer__text--s {
+        grid-area: text;
+        justify-self: flex-end;
+        font-size: 12px;
+    }
+
+    .footer__form {
+        grid-area: form;
+        padding-top: 26px;
+    }
+
+    .footer__input {
+        @include input;
+        padding-right: 12px;
+    }
+
+    .footer__button {
+        @include button;
+        @include button_color_accent;
+        text-transform: capitalize;
+        padding: 14px 24px;
+    }
+}
