@@ -79,22 +79,64 @@
     .footer {
         @include theme;
         @include theme_color_dark;
-        display: flex;
-        justify-content: space-between;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .footer__wrapper > * {
+        order: unset;
+    }
+
+    .footer__wrapper {
+        padding: 0;
+        display: grid;
+        grid-template-areas: "logo nav form" "socials nav text";
+        grid-template-columns: 240px 1fr 275px;
+    }
+
+    .footer__logo {
+        grid-area: logo;
+        margin-top: 14px;
+        margin-left: 4px;
     }
 
     .footer__nav {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        grid-area: nav;
+        align-content: stretch;
+        padding-top: 28px;
+    }
+
+    .footer__link {
+        padding-left: 50px;
+    }
+
+    .footer__socials {
+        grid-area: socials;
+        justify-content: flex-start;
+        padding: 20px 8px;
+        gap: 9px;
+    }
+
+    .footer__text--s {
+        grid-area: text;
+        justify-self: flex-end;
+        font-size: 12px;
+    }
+
+    .footer__form {
+        grid-area: form;
+        padding-top: 26px;
     }
 
     .footer__input {
         @include input;
+        padding-right: 12px;
     }
 
     .footer__button {
         @include button;
         @include button_color_accent;
+        text-transform: capitalize;
+        padding: 14px 24px;
     }
 }
