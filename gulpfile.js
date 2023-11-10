@@ -25,7 +25,7 @@ export function html() {
         .pipe(dest("dist/"));
 }
 
-function style() {
+function scss() {
     return src("src/sass/**/*.scss")
         .pipe(plumber())
         .pipe(sass())
@@ -35,6 +35,11 @@ function style() {
         .pipe(concat("index.css"))
         .pipe(minify())
         .pipe(rename("index.min.css"))
+        .pipe(dest("dist/style/"));
+}
+
+function style() {
+    return src("src/style/*.css")
         .pipe(dest("dist/style/"));
 }
 
@@ -74,8 +79,10 @@ function serve() {
         cors: true
     });
 
-    watch("src/**/*.{scss,sass}").on("change", series(style, server.reload));
+    watch("src/**/*.html").on("change", series(html, server.reload));
+    watch("src/**/*.{scss,sass}").on("change", series(scss, server.reload));
+    watch("src/**/*.js").on("change", series(scripts, server.reload));
 }
 
-export const build = series(clean, html, fonts, images, webp, sprite, style, scripts);
-export default series(clean, html, fonts, images, webp, sprite, style, scripts, serve);
+export const build = series(clean, html, fonts, images, webp, sprite, scss, style, scripts);
+export default series(clean, html, fonts, images, webp, sprite, scss, style, scripts, serve);

@@ -7,6 +7,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <title>Frontend Mentor | Manage landing page</title>
 
   <style>
@@ -102,13 +104,14 @@
       </ol>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials swiper">
       <h2 class="testimonials__title testimonials__title--l">
         What they’ve said
       </h2>
-      <ul class="testimonials__list">
-        <li class="testimonials__item">
+      <ul class="testimonials__list swiper-wrapper">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-anisha.png" alt="Avatar of Anisha Li">
             <h3 class="testimonials__title testimonials__title--m">
               Anisha Li
             </h3>
@@ -118,8 +121,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-ali.png" alt="Avatar of Ali Bravo">
             <h3 class="testimonials__title testimonials__title--m">
               Ali Bravo
             </h3>
@@ -130,8 +134,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-richard.png" alt="Avatar of Richard Watts">
             <h3 class="testimonials__title testimonials__title--m">
               Richard Watts
             </h3>
@@ -141,8 +146,9 @@
             </p>
           </article>
         </li>
-        <li class="testimonials__item">
+        <li class="testimonials__item swiper-slide">
           <article class="testimonials__article">
+            <img class="testimonials__avatar" src="./images/avatar-shanai.png" alt="Avatar of Shanai Gough">
             <h3 class="testimonials__title testimonials__title--m">
               Shanai Gough
             </h3>
@@ -153,6 +159,7 @@
           </article>
         </li>
       </ul>
+      <div class="swiper-pagination slider__indicator"></div>
       <a class="testimonials__button" href="#">Get Started</a>
     </section>
 
@@ -214,6 +221,19 @@
   </footer>
 
   <script src="./js/menu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".testimonials", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' slider__pointer"></span>';
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>
