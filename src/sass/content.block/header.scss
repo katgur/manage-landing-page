@@ -54,6 +54,9 @@
 }
 
 @media (min-width: $desktop) {
+    .header {
+        padding: 54px;
+    }
 
     .header__burger,
     .header__close {
@@ -76,9 +79,26 @@
         padding: 0;
     }
 
+    .header__link {
+        @include theme_font_s;
+        font-weight: 700;
+        margin-bottom: 4px;
+        padding: 12px;
+    }
+
+    .header__link:link, .header__link:visited {
+        color: var(--text-secondary);
+    }
+
     .header__button {
         @include button;
+        @include button_color_accent;
+        @include button--shadow;
         display: block;
 
+    }
+
+    .header__logo {
+        height: 24px;
     }
 }
